@@ -125,13 +125,13 @@
             <p class="text-xl">Para organizações que reciclam e/ou recebem doações.</p>
         </div>
 
-        <!-- CARD DE PARCEIROS: inicio -->
+        {% comment %} <!-- CARD DE PARCEIROS: inicio -->
         <div class="border border-gray-200 rounded-xl drop-shadow-xl hover:drop-shadow-2xl w-5/12 mb-10 maxHeight-5/12 ">
             <a href="{% url 'perfil:coletor_registro' %}">
                 <img src="{% static 'images/funcionario-pilha-lixo.png' %}" alt="">
             </a>
         </div>
-        <!-- CARD DE PARCEIROS: fim -->
+        <!-- CARD DE PARCEIROS: fim --> {% endcomment %}
 
         <div class="mb-3">
             <h2 class="text-4xl font-bold text-center text-primary-color py-3 uppercase">Testemunhos</h2>
