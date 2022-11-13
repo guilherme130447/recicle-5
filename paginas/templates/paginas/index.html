@@ -127,8 +127,8 @@
 
         <!-- CARD DE PARCEIROS: inicio -->
         <div class="border border-gray-200 rounded-xl drop-shadow-xl hover:drop-shadow-2xl w-5/12 mb-10 maxHeight-5/12 ">
-            <a>
-                <img src="{% static 'images/funcionario-pilha-lixo.png' %}" alt="">
+            <a href="{% url 'perfil:coletor_registro' %}">
+                {% comment %} <img src="{% static 'images/funcionario-pilha-lixo.png' %}" alt=""> {% endcomment %}
             </a>
         </div>
         <!-- CARD DE PARCEIROS: fim -->
