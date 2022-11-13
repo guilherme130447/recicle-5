@@ -1,0 +1,56 @@
+{% load static %}
+
+<footer class="mt-auto bg-primary-color">
+    <div class="container mx-auto w-10/12 py-16 text-white flex">
+
+        <!-- LOGO: inicio -->
+        <div class="flex flex-col items-center w-3/5">
+            <a class="py-3" href="{% url 'paginas:index' %}">
+                <img src="{% static 'images/logo/recicle-branco.png' %}" alt="">
+            </a>
+            <p>
+                O “Recicle” surgiu em 2020, a partir do desejo de seus idealizadores em contribuir com o meio ambiente.
+            </p>
+        </div>
+        <!-- LOGO: fim -->
+
+        <!-- PAGINAS IMPORTANTES: inicio -->
+        <div class="w-1/5">
+            <h3 class="font-bold uppercase">Páginas importântes</h3>
+            <nav>
+                <ul>
+                    <li class="hover:text-secondary-color hover:font-bold"><a href="{% url 'paginas:index' %}">Home</a>
+                    </li>
+                    <li class="hover:text-secondary-color hover:font-bold"><a href="{% url 'paginas:termos_de_uso' %}">Termos
+                            de Uso</a></li>
+                    <li class="hover:text-secondary-color hover:font-bold"><a
+                            href="{% url 'paginas:politica_de_privacidade' %}">Politica de Privacidade</a></li>
+                    <li class="hover:text-secondary-color hover:font-bold"><a
+                            href="{% url 'contatos:lgpd' %}">LGPD</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- PAGINAS IMPORTANTES: fim -->
+
+        <!-- REDES SOCIAIS: inicio -->
+        <div class="text-center w-1/5">
+            <h3 class="font-bold uppercase">Siga-nos nas redes sociais</h3>
+            <a class="text-6xl" href="https://pt-br.facebook.com/" target="_blank">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- REDES SOCIAIS: fim -->
+
+    </div>
+</footer>
+
+<div class="py-1 bg-gray-800 text-white">
+    <div class="container mx-auto text-center">
+        <p class="text-sm">
+            Carinhosamente <i class="fa fa-heart text-red-500" aria-hidden="true"></i> feito por Recicle! - © 2022 Todos
+            os direitos reservados.
+        </p>
+    </div>
+</div>

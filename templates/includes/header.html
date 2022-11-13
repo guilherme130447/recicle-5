@@ -1,0 +1,92 @@
+{% load static %}
+<!-- HEADER: inicio -->
+<header>
+    <!-- BARRA-TOPO: inicio -->
+    <div class="container-fluid w-full bg-primary-color py-1">
+        <div class="container flex justify-end mx-auto text-white text-xs font-bold">
+            <!-- BARRA-TOPO LINKS -->
+            <nav>
+                <ul class="flex">
+                    <li class="m-1 hover:text-green-900"><a href="{% url 'paginas:sobre' %}">Sobre</a></li>
+                    <li class="m-1 hover:text-green-900"><a href="{% url 'contatos:padrao' %}">Contato</a></li>
+                </ul>
+            </nav>
+            <!-- BARRA-TOPO WHATSAPP -->
+            <span class="bg-secondary-color h-full py-1 px-2">
+                <a href="https://www.whatsapp.com/?lang=pt_br" target="_blank">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <span>(31) 3344-5566</span>
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- BARRA-TOPO: fim -->
+
+    <!-- MENU: inicio -->
+    <div class="w-full bg-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center py-3 text-xs font-bold">
+            <div>
+                <a href="{% url 'paginas:index' %}">
+                    <img class="w-full" src="{% static 'images/logo/recicle.png' %}" alt="RECICLE LOGOTIPO">
+                </a>
+            </div>
+            <div>
+                <nav>
+                    <ul class="flex items-center">
+                        <li class="m-1"><a class="uppercase hover:text-primary-color"
+                                href="{% url 'paginas:index' %}">HOME</a></li>
+                        <li class="m-1"><a class="uppercase hover:text-primary-color"
+                                href="{% url 'paginas:lista_descartar' %}">DESCARTAR</a></li>
+                        <li class="m-1"><a class="uppercase hover:text-primary-color"
+                                href="{% url 'paginas:lista_doar' %}">DOAR</a></li>
+                        <li class="m-1"><a class="uppercase hover:text-primary-color"
+                                href="{% url 'posts:blog' %}">BLOG</a></li>
+
+                        {% if request.user.is_authenticated %}
+                            {% if not request.user.is_staff %}
+                            <li class="m-1">
+                                <a class="text-white rounded-lg bg-secondary-color p-3" href="{% url 'perfil:coletor_edicao' %}">
+                                    <span class="uppercase"> EDITAR PERFIL</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        
+
+                        {% if request.user.is_authenticated %}
+                        <li class="m-1">
+                            <span class="uppercase text-primary-color">Olá, {{ request.user }}</span>
+                        </li>
+                        {% endif %}
+                        {% if request.user.is_staff %}
+                        <li class="m-1">
+                            <a class="text-white bg-secondary-color p-3" href="{% url 'admin:index' %}">
+                                <i class="fa fa-cogs" aria-hidden="true"></i>
+                                <span class="uppercase"> ADMINISTRAÇÃO</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if request.user.is_authenticated %}
+                        <li class="m-1">
+                            <a class="hover:text-primary-color" href="{% url 'perfil:logout' %}">
+                                <i class="fa fa-sign-out text-secondary-color" aria-hidden="true"></i>
+                                <span class="uppercase">SAIR</span>
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="m-1">
+                            <a class="hover:text-primary-color" href="{% url 'perfil:login' %}">
+                                <i class="fa fa-sign-in text-secondary-color" aria-hidden="true"></i>
+                                <span class="uppercase">ENTRAR</span>
+                            </a>
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- MENU: fim -->
+</header>
+<!-- HEADER: fim -->

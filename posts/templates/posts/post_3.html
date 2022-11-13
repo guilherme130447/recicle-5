@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}O que é o lixo eletrônico - Recicle!{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- CONTEUDO PRINCIPAL inicio -->
+<section>
+    <div class="container mx-auto flex flex-col items-center">
+        <div class="mt-16">
+            <h1 class="text-center text-3xl text-primary-color font-bold mb-6 uppercase">Como descartar o lixo
+                eletrônico?
+            </h1>
+        </div>
+        <img class="rounded-lg shadow-lg mt-8 mb-16" src="{% static 'images/descartando-televisores.jpg' %}"
+            alt="imagem de destaque">
+        <div class="w-7/12 mb-16">
+
+            <p>Ao descartar lixo eletrônico, não desmonte o produto. Coloque-o no coletor, ou entregue ao catador,
+                inteiro. Se o aparelho tiver bateria de lítio, como em celulares, notebook, etc, deixe-a dentro do
+                equipamento. Para as pilhas comuns, basta descartá-las soltas ou em uma sacola de plástico em
+                qualquer ponto de coleta de pilhas ou até mesmo de eletrônicos, que também são equipados para
+                recebê-las.</p>
+
+        </div>
+    </div>
+</section>
+<!-- CONTEUDO PRINCIPAL fim  -->
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}

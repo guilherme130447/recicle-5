@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}O que é o lixo eletrônico - Recicle!{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- CONTEUDO PRINCIPAL inicio -->
+<section>
+    <div class="container mx-auto flex flex-col items-center">
+        <div class="mt-16">
+            <h1 class="text-center text-3xl text-primary-color font-bold mb-6 uppercase">10 Razões para reciclar o lixo
+                eletrônico
+            </h1>
+        </div>
+        <img class="rounded-lg shadow-lg mt-8 mb-16" src="{% static 'images/computadores-thumb.jpg' %}"
+            alt="imagem de destaque">
+        <div class="w-7/12 mb-16">
+
+            <p>
+                O Lixo Eletrônico possui muitos nomes, como e-lixo, resíduos de equipamento eletroeletrônico (REEE)
+                ou simplesmente resíduo eletrônico. Os termos se referem a produtos elétricos ou eletrônicos que são
+                descartados por não terem mais utilidade, ou seja, poderiam ser reciclados ao invés de destinados
+                em um aterro sanitário.
+            </p>
+
+            <h2 class="text-2xl font-bold mb-3">O lixo eletrônico pode ser classificado em quatro categorias básicas:
+            </h2>
+
+            <p>1. Grandes equipamentos: geladeiras, freezers, máquinas de lavar, fogões, ar condicionados,
+                microondas, grandes TVs, etc.</p>
+            <p>2. Pequenos equipamentos e eletroportáteis: torradeiras, batedeiras, aspiradores de pó, ventiladores,
+                mixers, secadores de cabelo, ferramentas elétricas, calculadoras, câmeras digitais, rádios, etc.</p>
+            <p>3. Equipamentos de informática e telefonia: computadores, tablets, notebooks, celulares, impressoras,
+                monitores e outros.</p>
+            <p>4. Pilhas e bateria portáteis: pilhas modelos AA, AAA, recarregáveis, baterias portáteis de 9 V, etc.
+            </p>
+
+            <h2 class="text-2xl font-bold mb-3">Tipos de materiais</h2>
+            <p>Os produtos contêm diferentes materiais, como plásticos, metais, vidros e muitos outros, que podem
+                ser desmontados, reciclados e usados como matéria-prima para fabricação de novos produtos. A
+                reciclagem contribui para a redução da extração de recursos da natureza, além de gerar novos
+                empregos e uma nova cadeia de empresas.</p>
+
+
+
+
+            <h2 class="text-2xl font-bold mb-3">1. Reutilização de metais preciosos:</h2>
+            <p>Segundo pesquisa da StEP (Solving the E-waste Problem), organização criada pela Universidade das
+                Nações Unidas (UNU) para criar soluções para controlar o lixo eletrônico em todo o mundo - reciclar
+                uma tonelada de celulares antigos pode render até 30,5 kg de prata, 130 kg de cobre e 340 g de ouro.
+                Estima-se que perdemos cerca de 7% do ouro do mundo devido ao manuseio incorreto. Além disso,
+                diversos metais ferrosos e não ferrosos podem ser reutilizados por meio da logística reversa
+                eletrônica. Esses materiais são inerentemente limitados e, após o término do estoque, podem causar
+                problemas na produção da commodity que conhecemos hoje e levar à instabilidade de preços. Então, ao
+                reciclar algo que foi colocado no mercado e não nos é mais útil, deve ser priorizado.</p>
+
+            <h2 class="text-2xl font-bold mb-3">2. Geração de empregos:</h2>
+            <p>A reciclagem de eletroeletrônicos, baterias e pilhas é um processo que exige mão de obra
+                especializada, desde o transporte dos materiais até os processos físicos e químicos que os
+                transformam em matéria-prima. Portanto, quanto maior a demanda por reciclagem, mais empregos devem
+                ser gerados na região.</p>
+
+            <h2 class="text-2xl font-bold mb-3">3. Economia de energia: </h2>
+            <p>Você sabia que, segundo a Fundação Ellen MacArthur, 75% da energia consumida pela indústria é
+                utilizada apenas para extrair e refinar matérias-primas? Isso significa que é muito mais econômico
+                usar matérias-primas reaproveitadas, como da reciclagem de eletrônicos, do que extrair
+                matérias-primas da natureza. Quando analisamos o cenário ambiental atual onde os recursos
+                energéticos da Terra estão esgotando, a reciclagem torna-se a opção mais plausível.</p>
+
+            <h2 class="text-2xl font-bold mb-3">4. Proteja seus dados:</h2>
+            <p>Se você descartar seu telefone de forma inadequada, existe o risco de que estranhos peguem seu
+                telefone e acessem seus dados. Mesmo que tenha apagado seus dados, não se sabe qual será o destino
+                final do material. A única forma segura de descarte desses equipamentos é por meio do sistema
+                oficial de logística reversa da empresa, que atende a altos padrões de certificação e segurança.</p>
+
+            <h2 class="text-2xl font-bold mb-3">5. Impulsiona a economia: </h2>
+            <p>Em 2019, cerca de 50 milhões de toneladas de lixo eletrônico foram geradas globalmente. Estima-se que
+                essa quantidade de material possa gerar mais de US$ 250 bilhões de dólares em receita. É claro que
+                todo esforço possível pode e deve ser feito para explorar a reciclagem de lixo eletrônico como uma
+                forma sustentável de impulsionar a economia.</p>
+
+
+            <h2 class="text-2xl font-bold mb-3">6. Redução da poluição da atmosfera:</h2>
+            <p>A logística reversa pode reduzir a extração de matérias-primas, o que significa menos emissões de gás
+                carbônico na atmosfera. Em outras palavras, a reciclagem de baterias e eletrônicos ajuda a deter os
+                efeitos do aquecimento global.</p>
+
+            <h2 class="text-2xl font-bold mb-3">7. Conservação de água:</h2>
+            <p>As baterias e pilhas podem conter metais pesados ​​como chumbo, níquel, mercúrio e cádmio. Se não
+                forem devidamente manuseados ou descartados em aterros sanitários, lixões ou no próprio meio
+                ambiente, esses elementos podem contaminar o solo, que por sua vez contamina os lençóis freáticos e
+                nossas águas.</p>
+
+            <h2 class="text-2xl font-bold mb-3">8. Alívio de Aterro Sanitário:</h2>
+            <p>De acordo com um relatório das Nações Unidas, o Brasil gera uma média de 1,5 milhão de toneladas de
+                lixo eletrônico a cada ano. Volumes tão grandes, se descartados em aterros sanitários, causariam
+                superlotação desses locais e encurtariam sua vida útil. Além disso, os resíduos eletrônicos não
+                serão reaproveitados e gerarão novas matérias-primas, com maior impacto negativo ao meio ambiente se
+                não forem descartados adequadamente.</p>
+
+            <h2 class="text-2xl font-bold mb-3">9. Está na Lei:</h2>
+            <p>O Acordo Setorial para a Logística Reversa de Produtos Eletroeletrônicos e seus Componentes, que
+                complementa a Política Nacional dos Resíduos Sólidos (Lei 12.305), de 2010, foi assinado em 2019 e
+                prevê metas de reciclagem de resíduos para fabricantes, distribuidores e importadores de produtos
+                eletroeletrônicos. A ideia é disponibilizar Pontos de Entrega Voluntária (PEV) em mais de 400
+                cidades brasileiras até 2025, para que o maior número possível de pessoas possa descartar seus
+                equipamentos não utilizados.</p>
+
+            <h2 class="text-2xl font-bold mb-3">10. É uma questão de cidadania: </h2>
+            <p>Há apenas vantagens em reciclar o lixo eletrônico. Em tempos como o atual, quando nossos recursos
+                naturais estão se esgotando, a logística reversa é uma das ferramentas mais eficazes que temos para
+                impulsionar nossa economia. Além disso, a reciclagem de equipamentos eletrônicos contribui para o
+                desenvolvimento sustentável da comunidade.</p>
+
+        </div>
+    </div>
+</section>
+<!-- CONTEUDO PRINCIPAL fim  -->
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}

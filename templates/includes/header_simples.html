@@ -1,0 +1,28 @@
+{% load static %}
+    <!-- HEADER: inicio -->
+
+    <header class="">
+        <!-- BARRA: inicio -->
+        <div class="w-full bg-primary-color shadow-lg">
+            <div class="container py-3 flex justify-between mx-auto  text-white text-xs font-bold">
+
+                <!-- BARRA LOGO -->
+                <div>
+                    <a href="{% url 'paginas:index' %}">
+                        <img class="w-32" src="{% static 'images/logo/recicle-branco.png' %}" alt="RECICLE LOGOTIPO">
+                    </a>
+                </div>
+
+                <!-- BARRA LINKS -->
+                <nav class="flex flex-col self-center justify-center">
+                    <ul>
+                       <li class="m-1 uppercase hover:text-green-900"><a href="{% url 'contatos:padrao' %}">Contato</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+        <!-- BARRA: fim -->
+
+    </header>
+    <!-- HEADER: fim -->

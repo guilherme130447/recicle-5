@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Recicle! – Seja bem-vindo!{% endblock %}
+
+{% block header %}
+    {% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- PRINCIPAL: inicio -->
+
+
+<section class="w-full my-9">
+    <div class="container mx-auto flex flex-col justify-center items-center">
+        <div class="w-1/2 self-center">
+            <img src="{% static 'images/error_4.png' %}" alt="erro 404">
+        </div>
+        <div class="my-6 block">
+            <a class="font-bold my-3" href="{% url 'paginas:index' %}">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span class="uppercase">Ir para a Homepage</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- PRINCIPAL: fim -->
+{% endblock %}

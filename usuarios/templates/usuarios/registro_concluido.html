@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}BEM-VINDO! | Recicle!{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block header %}
+{% include "includes/header_simples.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- PRINCIPAL: inicio -->
+
+    <section>
+        <div class="my-6 container mx-auto flex flex-col items-center">
+            <div class="">
+                <img class="w-52" src="{% static 'images/confetti.gif' %}" alt="">
+            </div>
+            <div class="text-center">
+                <h2 class="text-3xl">Olá, seja bem-vindo(a)!</h2>
+                <p>Seu cadastro foi realizado com sucesso.</p>
+            </div>
+            <div class="text-center text-secondary-color mt-4">
+                <a class="font-bold my-3" href="{% url 'perfil:login' %}">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span class="uppercase"> Realizar login</span>
+                </a>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'paginas:index' %}">Voltar para a Homepage</a>
+            </div>
+        </div>
+    </section>
+
+<!-- PRINCIPAL: fim -->
+{% endblock %}

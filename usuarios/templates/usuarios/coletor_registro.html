@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Recicle! - Cadastro de Coletores{% endblock %}
+
+
+{% block header %}
+  {% include "includes/header_simples.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- PRINCIPAL: inicio -->
+
+<section class="my-6">
+    <div class="container py-3 mx-auto">
+        <!-- FORMULÁRIO: inicio -->
+        <form class="flex flex-col items-center" method="post">
+          {% csrf_token %}
+          <div class="mb-6 text-center">
+            <h2 class="text-6xl mb-1 font-bold">Seja nosso Parceiro!</h2>
+            <p>Inscreva-se usando o formulário abaixo para e junte-se ao nosso ecossistema.</p>
+          </div>
+
+          {% if user_form.errors %}
+          <div class="bg-red-100 p-3 mb-3">
+            <ul>
+            {% for label, text in user_form.errors.items %}
+              <li>{{ text }}</li>
+            {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          <div class="mb-3">
+            <label class="block font-bold text-xs mb-1" for="id_username">Usuário (Obrigatório):</label>
+            {{ user_form.username }}
+          </div>
+          <div class="mb-3">
+            <label class="block font-bold text-xs mb-1" for="id_email">Endereço de email (Obrigatório):</label>
+            {{ user_form.email }}
+          </div>
+          <div class="mb-3">
+            <label class="block font-bold text-xs mb-1" for="id_password">Senha (Obrigatório):</label>
+            {{ user_form.password }}
+          </div>
+          <div class="mb-3">
+            <label class="block font-bold text-xs mb-1" for="id_password2">Repita a senha (Obrigatório):</label>
+            {{ user_form.password2 }}
+          </div>
+          <div class="mt-3 bg-green-100">
+            <button class="bg-primary-color px-6 py-2 text-white rounded">Continuar</button>
+          </div>
+
+        </form>
+        <!-- FORMULÁRIO: fim -->
+    </div>
+</section>
+
+<!-- PRINCIPAL: fim -->
+{% endblock %}

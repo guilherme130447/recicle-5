@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Recicle! - Entrar{% endblock %}
+
+{% block content %}
+    <section class="flex justify-center items-center flex-1 ">
+        <div class="bg-white p-6">
+            <div class="flex">
+                <div class="w-1/2 self-center">
+                    <img class="w-64" src="{% static 'images/login.png' %}" alt="">
+                </div>
+                <div class="w-1/2 m-3 bg-primary-color flex flex-col justify-center p-6 rounded-lg ">
+
+                    <h1 class="text-3xl font-bold uppercase text-white text-center py-3">Entrar</h1>
+
+                    <form action="{% url 'perfil:login' %}" method="POST">
+
+                        {% csrf_token %}
+
+                        <label for="id_username" class="block text-white py-1">Usuário:</label>
+
+                        {{ form.username }}
+                        {% if form.username.errors %}
+                            {{ form.username.errors }}
+                        {% endif %}
+    
+                        <label for="id_password" class="block text-white py-1">Senha:</label>
+                        {{ form.password }}
+                        {% if form.password.errors %}
+                            {{ form.password.errors }}
+                        {% endif %}
+    
+                        <div class="text-left">
+                            <input type="submit" class="cursor-pointer rounded-lg mt-3 py-2 px-3 bg-white font-bold mx-auto shadow-sm text-secondary-color" value="Entrar">
+                        </div>
+                    </form>
+                    <div class="mt-3 flex flex-col justify-center">
+                        <ul class="text-center">
+                            <li>
+                                <a class="p-3 text-white text-sm hover:text-secondary-color" href="{% url 'perfil:consumidor_registro' %}">Criar conta de usuário</a>
+                            </li>
+                            <li>
+                                <a class="p-3 text-white text-sm hover:text-secondary-color" href="{% url 'perfil:coletor_registro' %}">Criar conta de coletor</a>
+                            </li>
+                        </ul>
+                
+                        <ul class="text-center mt-6">
+                            <li>
+                                <a class="font-bold my-3 text-white" href="{% url 'paginas:index' %}">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                    <span class="uppercase">Voltar para a Home</span>
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sobre - Recicle!{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- CONTEUDO PRINCIPAL inicio -->
+
+
+<section class="mt-6 container mx-auto">
+    <div>
+        <div class="flex flex-col items-center">
+            <img class="w-1/3 mb-9" src="{% static 'images/sobre.png' %}" alt="">
+            <h1 class="text-center text-3xl text-primary-color font-bold mb-6 uppercase">Sobre o projeto Recicle</h1>
+        </div>
+    </div>
+    <div class="text-justify mb-16 w-2/3 container mx-auto">
+        <p class="">O “Recicle” surgiu em 2020, a partir do desejo de seus idealizadores em contribuir com o meio
+            ambiente.</p>
+        <p>Possui o objetivo de intermediar o contato entre organizações que fazem reciclagem de lixo
+            eletrônico e pessoas que querem contribuir com a natureza através da destinação adequada dos
+            resíduos.</p>
+    </div>
+</section>
+
+<!-- CONTEUDO PRINCIPAL fim  -->
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}

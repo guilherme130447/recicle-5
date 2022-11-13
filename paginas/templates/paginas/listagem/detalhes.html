@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contato - Recicle!{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+
+<section class="my-16">
+  <div class="container mx-auto flex items-center justify-center">
+    <div>
+      <form class="flex flex-col items-center">
+        <h1 class="text-center text-3xl text-primary-color font-bold mb-6 uppercase">Detalhes</h1>
+        <p class="mb-6">
+          <label class="block text-xs font-bold">Usuário</label>
+          <input class="rounded-lg" required="required" type="text" />
+        </p>
+
+        <p class="mb-6">
+          <label class="block text-xs font-bold">E-mail</label>
+          <input class="rounded-lg" required="required" type="text" />
+        </p>
+
+        <p class="mb-6">
+          <label class="block text-xs font-bold">Telefone</label>
+          <input class="rounded-lg" required="required" type="text" />
+        </p>
+
+        <h2 class="uppercase text-sm text-center font-bold text-primary-color">Conteúdo da mensagem</h2>
+
+        <p class="mb-6">
+          <label class="block text-xs font-bold">Assunto</label>
+          <input class="rounded-lg" required="required" type="text" />
+        </p>
+
+        <p class="mb-6">
+          <label class="block text-xs font-bold">Mensagem</label>
+          <input class="rounded-lg" required="required" type="text" />
+        </p>
+
+        <p class="text-center">
+          <button class="bg-primary-color px-6 py-2 font-bold text-white rounded">Enviar Mensagem</button>
+        </p>
+        <img class="w-2/3" src="{% static 'images/mail.png' %}" alt="">
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/carousel.js' %}"></script>
+{% endblock %}

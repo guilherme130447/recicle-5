@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Recicle! - Blog{% endblock %}
+
+{% block header %}
+    {% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- pagina inicio -->
+
+<div class="py-6 bg-primary-color">
+    <div class="container mx-auto text-center flex flex-col items-center">
+        <h2 class="pt-3 pb-9 text-6xl text-white font-bold">BLOG</h2>
+    </div>
+</div>
+
+<div class="my-3 hidden">
+    <div class="container mx-auto flex justify-center">
+        <form class="mt-9" method="POST">
+            <label for="" class="font-bold">Pesquise por mais conteúdo aqui:</label>
+            <input class="p-2" type="text" placeholder="Pesquisar">
+            <a class="bg-secondary-color relative rounded p-3 text-white font-bold" type="submit" href="#">Ok</a>
+        </form>
+    </div>
+</div>
+
+<!-- SEÇÃO DE POSTS: inicio -->
+<section class="my-10">
+
+    <div class="container mx-auto w-10/12">
+
+        <div class="w-full text-center mb-3">
+            <h2 class="text-4xl py-3 font-bold text-center text-primary-color uppercase">Veja os nossos posts</h2>
+            <span class="text-xl">Materiais educativos, notícias e curiosidades.</span>
+        </div>
+
+        <!-- POSTAGENS: inicio -->
+        <div class="w-full my-6 flex justify-between">
+
+            <!-- POST #1: inicio -->
+            <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
+                <a href="{% url 'posts:post-1' %}">
+                    <img class="rounded-t-lg w-100" src="{% static 'images/mobile-thumb.jpg' %}" alt="">
+                </a>
+                <div class="p-5">
+                    <a href="{% url 'posts:post-1' %}">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">O que é o lixo eletrônico</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700">O Lixo Eletrônico possui muitos nomes, como e-lixo,
+                        resíduos de equipamento ...</p>
+                    <a href="{% url 'posts:post-1' %}"
+                        class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary-color rounded-lg hover:bg-secondary-color focus:ring-4 focus:outline-none focus:hover:bg-secondary-color">
+                        Continue lendo
+                        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- POST #1: fim -->
+
+            <!-- POST #2: inicio -->
+            <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
+                <a href="{% url 'posts:post-2' %}">
+                    <img class="rounded-t-lg w-100" src="{% static 'images/computadores-thumb.jpg' %}" alt="">
+                </a>
+                <div class="p-5">
+                    <a href="{% url 'posts:post-2' %}">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">10 Razões para reciclar o lixo
+                            eletrônico</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700">Segundo pesquisa da StEP (Solving the E-waste Problem),
+                        organização criada pela Universidade das Nações Unidas (UNU) para criar .. ...</p>
+                    <a href="{% url 'posts:post-2' %}"
+                        class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary-color rounded-lg hover:bg-secondary-color focus:ring-4 focus:outline-none focus:hover:bg-secondary-color">
+                        Continue lendo
+                        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- POST #2: fim -->
+
+            <!-- POST #3: inicio -->
+            <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
+                <a href="{% url 'posts:post-3' %}">
+                    <img class="rounded-t-lg w-100" src="{% static 'images/descartando-televisores.jpg' %}" alt="">
+                </a>
+                <div class="p-5">
+                    <a href="{% url 'posts:post-3' %}">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Como descartar o lixo
+                            eletrônico?</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700">Ao descartar lixo eletrônico, não desmonte o produto.
+                        Coloque-o no coletor, ou entregue ao catador, inteiro. ...</p>
+                    <a href="{% url 'posts:post-3' %}"
+                        class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary-color rounded-lg hover:bg-secondary-color focus:ring-4 focus:outline-none focus:hover:bg-secondary-color">
+                        Continue lendo
+                        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- POST #3: fim -->
+
+        </div>
+        <!-- POSTAGENS: fim -->
+
+    </div>
+</section>
+<!-- SEÇÃO DE POSTS: fim -->
+
+<!-- pagina fim -->
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}

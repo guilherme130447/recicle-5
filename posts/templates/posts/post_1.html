@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}O que é o lixo eletrônico - Recicle!{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- CONTEUDO PRINCIPAL inicio -->
+<section>
+    <div class="container mx-auto flex flex-col items-center">
+        <div class="mt-16">
+            <h1 class="text-center text-3xl text-primary-color font-bold mb-6 uppercase">O que é o lixo eletrônico
+            </h1>
+        </div>
+        <img class="max-w-5xl rounded-lg shadow-lg mt-8 mb-16" src=" {% static 'images/mobile-post.jpg' %}"
+            alt="imagem de destaque">
+        <div class="w-7/12 mb-16">
+
+            <p>
+                O Lixo Eletrônico possui muitos nomes, como e-lixo, resíduos de equipamento eletroeletrônico (REEE)
+                ou simplesmente resíduo eletrônico. Os termos se referem a produtos elétricos ou eletrônicos que são
+                descartados por não terem mais utilidade, ou seja, poderiam ser reciclados ao invés de destinados
+                em um aterro sanitário.
+            </p>
+
+            <h2 class="text-2xl font-bold mb-3">O lixo eletrônico pode ser classificado em quatro categorias básicas:
+            </h2>
+
+            <p>1. Grandes equipamentos: geladeiras, freezers, máquinas de lavar, fogões, ar condicionados,
+                microondas, grandes TVs, etc.</p>
+            <p>2. Pequenos equipamentos e eletroportáteis: torradeiras, batedeiras, aspiradores de pó, ventiladores,
+                mixers, secadores de cabelo, ferramentas elétricas, calculadoras, câmeras digitais, rádios, etc.</p>
+            <p>3. Equipamentos de informática e telefonia: computadores, tablets, notebooks, celulares, impressoras,
+                monitores e outros.</p>
+            <p>4. Pilhas e bateria portáteis: pilhas modelos AA, AAA, recarregáveis, baterias portáteis de 9 V, etc.
+            </p>
+
+            <h2 class="text-2xl font-bold mb-3">Tipos de materiais</h2>
+            <p>Os produtos contêm diferentes materiais, como plásticos, metais, vidros e muitos outros, que podem
+                ser desmontados, reciclados e usados como matéria-prima para fabricação de novos produtos. A
+                reciclagem contribui para a redução da extração de recursos da natureza, além de gerar novos
+                empregos e uma nova cadeia de empresas.</p>
+
+        </div>
+    </div>
+</section>
+<!-- CONTEUDO PRINCIPAL fim  -->
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}

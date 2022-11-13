@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Recicle! - Descartes{% endblock %}
+
+{% block header %}
+    {% include "includes/header.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- CONTEUDO PRINCIPAL inicio -->
+
+<div class="py-6 bg-primary-color">
+    <div class="container mx-auto text-center flex flex-col items-center">
+        <h2 class="pt-3 pb-9 text-6xl text-white font-bold">DESCARTAR</h2>
+    </div>
+</div>
+
+<div class="my-3 hidden">
+    <div class="container mx-auto flex justify-center">
+        <form class="mt-9" method="POST">
+            <label for="" class="font-bold">Faça a sua pesquisa aqui:</label>
+            <input class="p-2" type="text" placeholder="Pesquisar">
+            <a class="bg-secondary-color relative rounded p-3 text-white font-bold" type="submit" href="#">Ok</a>
+        </form>
+    </div>
+</div>
+
+<section class="my-9">
+    <div class="container mx-auto flex flex-col items-center">
+
+        <a href="{% url 'paginas:coletor_1' %}" class="my-6 flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{% static 'images/sucata-digital.jpg' %}" alt="">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Sucata Digital
+                </h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Nós realizamos o gerenciamento do lixo eletrônico gerado em empresas e residências, garantindo a destinação final.
+                </p>
+                
+            </div>
+        </a>
+
+        <a href="{% url 'paginas:coletor_2' %}" class="my-6 flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{% static 'images/empresa-coleta-lampadas-01.jpg' %}" alt="">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    E-MILE Reciclagem de Lixo Eletrônico
+                </h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Te ajudamos a descartar seus resíduos eletroeletrônicos corretamente, evitando ainda mais danos ao meio ambiente.
+                </p>
+            </div>
+        </a>
+
+        <a href="{% url 'paginas:coletor_3' %}" class="my-6 flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{% static 'images/empresa-descarte-pilhas-01.jpg' %}" alt="">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    BH Recicla
+                </h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    De celulares antigos esquecidos em gavetas a geladeiras paradas. Que tal se livrar desses resíduos?
+                </p>
+            </div>
+        </a>
+
+
+        <a href="{% url 'paginas:coletor_4' %}" class="my-6 flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{% static 'images/empresa-reciclagem-preco-01.jpg' %}" alt="">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Reciclo Inteligência Ambiental 
+                </h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Compramos todo tipo de sucata eletrônica. Entrem em contato conosco, estamos a disposição.
+                </p>
+            </div>
+        </a>
+
+        
+        <a href="{% url 'paginas:coletor_5' %}" class="my-6 flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{% static 'images/empresas-reciclagem-impressoras-04.jpg' %}" alt="">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    MG Recicla
+                </h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Realizamos a coleta do seu lixo eletrônico de forma simples e gratuita. Estamos aqui para melhor atendê-lo.
+                </p>
+            </div>
+        </a>
+
+
+    </div>
+</section>
+
+<!-- CONTEUDO PRINCIPAL fim  -->
+{% endblock %}
+
+{% block footer %}
+    {% include "includes/footer.html" %}
+{% endblock %}
