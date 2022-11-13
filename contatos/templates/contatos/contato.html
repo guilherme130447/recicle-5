@@ -9,44 +9,57 @@
 
 {% block content %}
 
-<section class="my-16">
-  <div class="container mx-auto flex items-center justify-center">
-    <div>
-      <form class="flex flex-col items-center">
-        <h1 class="text-center text-3xl text-primary-color font-bold mb-6 uppercase">Entre em contato</h1>
-        <p class="mb-6">
-          <label class="block text-xs font-bold">Usuário</label>
-          <input class="rounded-lg" required="required" type="text" />
-        </p>
+<section>
 
-        <p class="mb-6">
-          <label class="block text-xs font-bold">E-mail</label>
-          <input class="rounded-lg" required="required" type="text" />
-        </p>
-
-        <p class="mb-6">
-          <label class="block text-xs font-bold">Telefone</label>
-          <input class="rounded-lg" required="required" type="text" />
-        </p>
-
-        <h2 class="uppercase text-sm text-center font-bold text-primary-color">Conteúdo da mensagem</h2>
-
-        <p class="mb-6">
-          <label class="block text-xs font-bold">Assunto</label>
-          <input class="rounded-lg" required="required" type="text" />
-        </p>
-
-        <p class="mb-6">
-          <label class="block text-xs font-bold">Mensagem</label>
-          <input class="rounded-lg" required="required" type="text" />
-        </p>
-
-        <p class="text-center">
-          <button class="bg-primary-color px-6 py-2 font-bold text-white rounded">Enviar Mensagem</button>
-        </p>
-        <img class="w-2/3" src="{% static 'images/mail.png' %}" alt="">
-      </form>
+  <div class="bg-primary-color" style = "height:20rem; padding-left:3rem;">
+    <div class="header-body-2 bg-primary-color">
+      <h2 class="text-left text-3xl mb-3 font-bold text-white font-bold uppercase" style="padding-top:5rem;">Entre em contato conosco</h2>
+      <p class="text-white text-1xl font-bold" style="padding-top:2rem;">* Campos São Obrigatórios</p>
     </div>
+  </div>
+
+
+
+  <div class="container py-3 mx-auto">
+    <form class="flex flex-col items-center" style = "background-color: rgba(245, 245, 245);border-radius: 10px;display: flex;width: 45rem;height: 38rem;margin: -150px 0px 100px 400px;border: 3px solid rgba(230, 230, 230);">
+      
+      <h1 class="text-3xl mb-3 " style="align-text:left;">Seus Dados</h1>
+
+      <div class="bg-primary-color mb-9" style="width:38rem;height:1px;"></div>
+      
+      <p class="mb-6">
+        <label class="block text-xs font-bold">Usuário</label>
+        <input class="rounded-lg" required="required" type="text" />
+      </p>
+
+      <p class="mb-6">
+        <label class="block text-xs font-bold">E-mail</label>
+        <input class="rounded-lg" required="required" type="text" />
+      </p>
+
+      <p class="mb-6">
+        <label class="block text-xs font-bold">Telefone</label>
+        <input class="rounded-lg" required="required" type="text" />
+      </p>
+
+      {% comment %} <h2 class="uppercase text-sm text-center font-bold text-primary-color">Conteúdo da mensagem</h2> {% endcomment %}
+
+      <p class="mb-6">
+        <label class="block text-xs font-bold">Assunto</label>
+        <input class="rounded-lg" required="required" type="text" />
+      </p>
+
+      <p class="mb-6">
+        <label class="block text-xs font-bold">Mensagem</label>
+        <input class="rounded-lg" required="required" type="text" />
+      </p>
+
+      <p class="text-center">
+        <button class="bg-primary-color px-6 py-2 font-bold text-white rounded">Enviar Mensagem</button>
+      </p>
+      {% comment %} <img class="w-2/3" src="{% static 'images/mail.png' %}" alt=""> {% endcomment %}
+    </form>
+    
   </div>
 </section>
 {% endblock %}

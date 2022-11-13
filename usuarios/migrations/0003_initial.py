@@ -11,94 +11,255 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('usuarios', '0002_auto_20220602_0043'),
+        ("usuarios", "0002_auto_20220602_0043"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Coletor',
+            name="Coletor",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('tipo', models.CharField(choices=[('coletor', 'Coletor'), ('consumidor', 'Consumidor'), ('colaborador', 'Colaborador')], default='consumidor', max_length=11, verbose_name='Tipo de usuário')),
-                ('coleta_a_domicilio', models.BooleanField(default=False, verbose_name='Coleta a domicílio')),
-                ('coleta_em_toda_cidade', models.BooleanField(default=False, verbose_name='Coleta em toda a cidade')),
-                ('trabalha_descarte', models.BooleanField(default=False, verbose_name='Trabalha com descarte')),
-                ('trabalha_doacao', models.BooleanField(default=False, verbose_name='Trabalha com doação')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "tipo",
+                    models.CharField(
+                        choices=[
+                            ("coletor", "Coletor"),
+                            ("consumidor", "Consumidor"),
+                            ("colaborador", "Colaborador"),
+                        ],
+                        default="consumidor",
+                        max_length=11,
+                        verbose_name="Tipo de usuário",
+                    ),
+                ),
+                (
+                    "coleta_a_domicilio",
+                    models.BooleanField(
+                        default=False, verbose_name="Coleta a domicílio"
+                    ),
+                ),
+                (
+                    "coleta_em_toda_cidade",
+                    models.BooleanField(
+                        default=False, verbose_name="Coleta em toda a cidade"
+                    ),
+                ),
+                (
+                    "trabalha_descarte",
+                    models.BooleanField(
+                        default=False, verbose_name="Trabalha com descarte"
+                    ),
+                ),
+                (
+                    "trabalha_doacao",
+                    models.BooleanField(
+                        default=False, verbose_name="Trabalha com doação"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Coletor',
-                'verbose_name_plural': 'Coletores',
+                "verbose_name": "Coletor",
+                "verbose_name_plural": "Coletores",
             },
         ),
         migrations.CreateModel(
-            name='EnderecoModel',
+            name="EnderecoModel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('logradouro', models.CharField(blank=True, max_length=255, verbose_name='Logradouro')),
-                ('numero', models.CharField(blank=True, default='s/n', max_length=5, verbose_name='Número')),
-                ('complemento', models.CharField(blank=True, max_length=255, verbose_name='Complemento')),
-                ('bairro', models.CharField(blank=True, max_length=50, verbose_name='Bairro')),
-                ('cidade', models.CharField(blank=True, max_length=50, verbose_name='Cidade')),
-                ('estado', models.CharField(blank=True, max_length=2, verbose_name='Estado')),
-                ('cep', models.CharField(blank=True, max_length=8, verbose_name='CEP')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "logradouro",
+                    models.CharField(
+                        blank=True, max_length=255, verbose_name="Logradouro"
+                    ),
+                ),
+                (
+                    "numero",
+                    models.CharField(
+                        blank=True, default="s/n", max_length=5, verbose_name="Número"
+                    ),
+                ),
+                (
+                    "complemento",
+                    models.CharField(
+                        blank=True, max_length=255, verbose_name="Complemento"
+                    ),
+                ),
+                (
+                    "bairro",
+                    models.CharField(blank=True, max_length=50, verbose_name="Bairro"),
+                ),
+                (
+                    "cidade",
+                    models.CharField(blank=True, max_length=50, verbose_name="Cidade"),
+                ),
+                (
+                    "estado",
+                    models.CharField(blank=True, max_length=2, verbose_name="Estado"),
+                ),
+                ("cep", models.CharField(blank=True, max_length=8, verbose_name="CEP")),
+                (
+                    "empresa",
+                    models.CharField(blank=True, max_length=8, verbose_name="Empresa"),
+                ),
+                (
+                    "cnpj",
+                    models.CharField(blank=True, max_length=8, verbose_name="CNPJ"),
+                ),
             ],
             options={
-                'verbose_name': 'Endereço',
-                'verbose_name_plural': 'Endereços',
+                "verbose_name": "Endereço",
+                "verbose_name_plural": "Endereços",
             },
         ),
         migrations.CreateModel(
-            name='ItemModel',
+            name="ItemModel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=50, verbose_name='Item')),
-                ('descricao', models.CharField(blank=True, max_length=50, verbose_name='Descrição do item')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nome", models.CharField(max_length=50, verbose_name="Item")),
+                (
+                    "descricao",
+                    models.CharField(
+                        blank=True, max_length=50, verbose_name="Descrição do item"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Item',
-                'verbose_name_plural': 'Itens',
+                "verbose_name": "Item",
+                "verbose_name_plural": "Itens",
             },
         ),
         migrations.CreateModel(
-            name='Consumidor',
+            name="Consumidor",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('tipo', models.CharField(choices=[('coletor', 'Coletor'), ('consumidor', 'Consumidor'), ('colaborador', 'Colaborador')], default='consumidor', max_length=11, verbose_name='Tipo de usuário')),
-                ('endereco', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='usuarios.enderecomodel')),
-                ('favoritos', models.ManyToManyField(to='usuarios.Coletor')),
-                ('usuario', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "tipo",
+                    models.CharField(
+                        choices=[
+                            ("coletor", "Coletor"),
+                            ("consumidor", "Consumidor"),
+                            ("colaborador", "Colaborador"),
+                        ],
+                        default="consumidor",
+                        max_length=11,
+                        verbose_name="Tipo de usuário",
+                    ),
+                ),
+                (
+                    "endereco",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="usuarios.enderecomodel",
+                    ),
+                ),
+                ("favoritos", models.ManyToManyField(to="usuarios.Coletor")),
+                (
+                    "usuario",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Consumidor',
-                'verbose_name_plural': 'Consumidores',
+                "verbose_name": "Consumidor",
+                "verbose_name_plural": "Consumidores",
             },
         ),
         migrations.AddField(
-            model_name='coletor',
-            name='endereco',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='usuarios.enderecomodel'),
+            model_name="coletor",
+            name="endereco",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE, to="usuarios.enderecomodel"
+            ),
         ),
         migrations.AddField(
-            model_name='coletor',
-            name='itens_trabalhados',
-            field=models.ManyToManyField(to='usuarios.ItemModel'),
+            model_name="coletor",
+            name="itens_trabalhados",
+            field=models.ManyToManyField(to="usuarios.ItemModel"),
         ),
         migrations.AddField(
-            model_name='coletor',
-            name='usuario',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
+            model_name="coletor",
+            name="usuario",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL
+            ),
         ),
         migrations.CreateModel(
-            name='Colaborador',
+            name="Colaborador",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('tipo', models.CharField(choices=[('coletor', 'Coletor'), ('consumidor', 'Consumidor'), ('colaborador', 'Colaborador')], default='consumidor', max_length=11, verbose_name='Tipo de usuário')),
-                ('endereco', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='usuarios.enderecomodel')),
-                ('usuario', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "tipo",
+                    models.CharField(
+                        choices=[
+                            ("coletor", "Coletor"),
+                            ("consumidor", "Consumidor"),
+                            ("colaborador", "Colaborador"),
+                        ],
+                        default="consumidor",
+                        max_length=11,
+                        verbose_name="Tipo de usuário",
+                    ),
+                ),
+                (
+                    "endereco",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="usuarios.enderecomodel",
+                    ),
+                ),
+                (
+                    "usuario",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Colaborador',
-                'verbose_name_plural': 'Colaboradores',
+                "verbose_name": "Colaborador",
+                "verbose_name_plural": "Colaboradores",
             },
         ),
     ]
